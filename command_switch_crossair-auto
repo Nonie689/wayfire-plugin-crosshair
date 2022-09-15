@@ -7,11 +7,17 @@ then
   exit
 fi
 
-echo "Auto switch is now enabled!"
+if ! test $1
+then
+   interval=$1
+else
+   interval=0.500
+fi
 
+echo "Auto switch is now enabled!"
 
 while true
 do
    command_switch_crossair-set_randomcolor
-   sleep $1
+   sleep $interval
 done &
