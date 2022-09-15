@@ -7,7 +7,7 @@ then
   exit
 fi
 
-if ! test $1
+if ! test $1 -z
 then
    interval=$1
 else
